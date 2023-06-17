@@ -7,6 +7,9 @@ import {Article} from './Article.tsx'
 
 export const Feed = () => {
 
+  //api from News API
+  //https://newsapi.org/v2/top-headlines?country=au&apiKey=
+
   const apiKey = import.meta.env.VITE_API_KEY;
   let url = apiKey
 
