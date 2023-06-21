@@ -1,5 +1,11 @@
 
-export const Article = ({author, title,url}) => {
+interface ArticleProps {
+  author: string;
+  title: string;
+  url: string;
+}
+
+export const Article: React.FC<ArticleProps> = ({author, title,url}) => {
   
   let container: string = ' rounded mb-2 px-5 py-2 bg-stone-950 text-white h-22' 
   let authorstyle: string = 'text-bold text-xl mb-1'

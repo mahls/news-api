@@ -4,6 +4,17 @@ import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
 import {Article} from './Article.tsx'
 
+interface FeedProps {
+  data: {
+    articles: {
+      author: string;
+      title: string;
+      url: string;
+    }[];
+  };
+}
+
+
 export const Feed = () => {
 
   //api from News API
@@ -12,8 +23,8 @@ export const Feed = () => {
   const apiKey = import.meta.env.VITE_API_KEY;
   let url = apiKey
 
-  const fetcher = (url) => {
-    return axios.get(url).then((res) => res.data);
+  const fetcher = (url: string): Promise<any> => {
+    return axios.get(url).then((res: AxiosResponse<any>) => res.data);
   };
   
   const { data, error, isLoading } = useSWR(url, fetcher);
@@ -30,7 +41,7 @@ export const Feed = () => {
 
   return(
     <div className='px-5 py-5 bg-stone-900'>
-      {data.articles.map((item, idx)=>{return(<Article key={idx} author={item.author} title={item.title} url={item.url}/>)})}
+y      {data.articles.map((item: FeedProps , idx: number)=>{return(<Article key={idx} author={item.author} title={item.title} url={item.url}/>)})}
     </div>
   ) 
 
