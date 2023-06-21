@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {Navbar} from './components/Navbar.tsx'
 import {Feed} from './components/Feed.tsx'
 import {Footer} from './components/Footer.tsx'

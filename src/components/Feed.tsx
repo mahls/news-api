@@ -1,4 +1,3 @@
-import React from 'react'
 import useSWR from 'swr'
 import axios from 'axios'
 import CircularProgress from '@mui/material/CircularProgress'
