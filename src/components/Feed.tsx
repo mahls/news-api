@@ -6,11 +6,9 @@ import {Article} from './Article.tsx'
 
 interface FeedProps {
   data: {
-    articles: {
       author: string;
       title: string;
       url: string;
-    }[];
   };
 }
 
