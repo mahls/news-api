@@ -3,13 +3,13 @@ import axios from 'axios'
 import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
 import {Article} from './Article.tsx'
+import { AxiosResponse } from 'axios';
+
 
 interface FeedProps {
-  data: {
-      author: string;
-      title: string;
-      url: string;
-  };
+    author: string;
+    title: string;
+    url: string;
 }
 
 
