@@ -6,20 +6,12 @@ import {Article} from './Article.tsx'
 import { AxiosResponse } from 'axios';
 
 
-interface FeedProps {
-    author: string;
-    title: string;
-    url: string;
-}
+export const Weather = () => {
 
-
-export const Feed = () => {
-
-  //api from News API
-  //https://newsapi.org/v2/top-headlines?country=au&apiKey=
-
-  const apiKey = import.meta.env.VITE_API_KEY;
-  let url = apiKey
+  let API = '814325d99c0705e71d8c81b2a4810134'
+  let lat = '27'
+  let lon = '153'
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}`
 
   const fetcher = (url: string): Promise<any> => {
     return axios.get(url).then((res: AxiosResponse<any>) => res.data);
@@ -38,8 +30,8 @@ export const Feed = () => {
   )
 
   return(
-    <div className='px-5 py-5 bg-stone-900 flex flex-col sm:grid sm:grid-cols-4'>
-      {data.articles.map((item: FeedProps , idx: number)=>{return(<Article key={idx} author={item.author} title={item.title} url={item.url}/>)})}
+    <div className='h-screen bg-stone-900'>
+      {console.log({data})}
     </div>
   ) 
 
