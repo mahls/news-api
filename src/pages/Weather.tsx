@@ -24,11 +24,8 @@ let Card = ({title, data, borderColor}) => {
 
 export const Weather = () => {
 
-  let API = '814325d99c0705e71d8c81b2a4810134'
-
   let lat = '37'
   let lon = '144'
-  let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}`
   let url2 = 'https://api.open-meteo.com/v1/forecast?latitude=27&longitude=153&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m'
 
   let cardStyle = 'bg-stone-800 rounded text-8xl h-[50vh]'
@@ -37,7 +34,7 @@ export const Weather = () => {
     return axios.get(url2).then((res: AxiosResponse<any>) => res.data);
   };
   
-  const { data, error, isLoading } = useSWR(url, fetcher);
+  const { data, error, isLoading } = useSWR(url2, fetcher);
 
   if (error) return <div>failed to load</div>;
   
