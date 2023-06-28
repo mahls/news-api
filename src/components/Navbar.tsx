@@ -12,8 +12,8 @@ export const Navbar = () => {
   let style = 'border border-stone-800 rounded px-5 py-1 mr-2 hover:bg-stone-900 transition cursor-pointer '
   let linksidemenu = 'border-b border-stone-800 px-5 text-xl py-2 text-stone-200 hover:bg-stone-800'
 
-  let sideMenuStyle = `w-[80vw] h-full bg-stone-950 fixed top-0 left-0 z-50 ${!open ? '-translate-x-full' : 'trasnalte-x-none'} transition`
-  let backdropStyle = `transition ${open ? 'fixed' : 'hidden' } opacity-25 w-full h-full top-0 left-0 bg-black cursor-pointer z-40`
+  let sideMenuStyle = `w-[80vw] h-full bg-stone-950 fixed top-0 left-0 z-50 ${open ? '-translate-x-full' : 'trasnalte-x-none'} transition`
+  let backdropStyle = `transition ${!open ? 'fixed' : 'hidden' } opacity-25 w-full h-full top-0 left-0 bg-black cursor-pointer z-40`
 
 
   return (
@@ -21,9 +21,9 @@ export const Navbar = () => {
     {/*desktop*/}
     <div className='hidden sm:flex bg-stone-950 text-white font-bold px-5 py-2'>
       <div className={titleStyle}> API </div>
-      <div className={style}><Link to="/">News</Link></div>
-      <div className={style}><Link to="/weather">Weather</Link></div>
-      <div className={style}><Link to="/bitcoin">Bitcoin</Link></div>
+      <Link className={style} to="/">News</Link>
+      <Link className={style} to="/weather">Weather</Link>
+      <Link className={style} to="/bitcoin">Bitcoin</Link>
     </div>
     
     {/*mobile*/}

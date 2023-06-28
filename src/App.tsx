@@ -3,7 +3,7 @@ import {Feed} from './components/Feed.tsx'
 import {Footer} from './components/Footer.tsx'
 import {Weather} from './pages/Weather.tsx'
 import {Bitcoin} from './pages/Bitcoin.tsx'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
 

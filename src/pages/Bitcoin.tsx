@@ -36,14 +36,15 @@ export const Bitcoin = () => {
     <div className='h-screen bg-stone-900'>
       <div className='h-5'></div>
       <div className='flex justify-center sm:flex-none mx-5 py-2 border border-green-500 bg-green-900 rounded font-bold'>
-        <div className='text-stone-200 text-xl'>AUD ${data.AUD.last}</div>
+        <div className='text-stone-200 text-xl'>AUD $ {data.AUD.last}</div>
       </div>
       <div className='flex justify-center sm:flex-none mx-5 my-5 py-2 border border-purple-500 bg-purple-900 rounded font-bold'>
-        <div className='text-stone-200 text-xl'>DKK kr{data.DKK.last}</div>
+        <div className='text-stone-200 text-xl'>DKK kr {data.DKK.last}</div>
       </div>
       <div className='flex justify-center sm:flex-none mx-5 py-2 border border-orange-500 rounded bg-orange-900 font-bold'>
-        <div className='text-stone-200 text-xl'>JPY  ¥{data.AUD.last}</div>
+        <div className='text-stone-200 text-xl'>JPY  ¥ {data.AUD.last}</div>
       </div>
+      {console.log(data2)}
     </div>
   ) 
 
