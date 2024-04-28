@@ -19,7 +19,7 @@ export const Navbar = () => {
   return (
     <>
     {/*desktop*/}
-    <div className='hidden sm:flex bg-stone-950 text-white px-5 py-2'>
+    <div className='hidden sm:flex bg-stone-950 text-white px-5 py-2 pt-5'>
       <Link className={titleStyle} to="/"> API </Link>
       <Link className={style} to="/">News</Link>
       <Link className={style} to="/weather">Weather</Link>
@@ -28,7 +28,7 @@ export const Navbar = () => {
     
     {/*mobile*/}
     <div className='sm:hidden flex justify-between bg-stone-950 text-white font-bold px-5 py-2 z-50'>
-      <div className={titleStyle}> API </div>
+      <Link className={titleStyle} to='/'> API </Link>
       <div className='cursor-pointer z-50'><HiMenuAlt3 onClick={()=>{set_open(!open)}} className='text-2xl mt-1 cursor-pointer'/></div>
     </div>
 
@@ -40,9 +40,9 @@ export const Navbar = () => {
 
       </div>
       <div className='flex flex-col'>
-      <Link className={link_side_menu} to="/" >News</Link>
-      <Link className={link_side_menu} to="/weather"  >Weather</Link>
-      <Link className={link_side_menu} to="/bitcoin" >Bitcoin</Link> 
+      <Link className={link_side_menu} to="/" onClick={()=>{set_open(!open)}}>News</Link>
+      <Link className={link_side_menu} to="/weather" onClick={()=>{set_open(!open)}} >Weather</Link>
+      <Link className={link_side_menu} to="/bitcoin" onClick={()=>{set_open(!open)}} >Bitcoin</Link> 
       </div>
       </div>
 

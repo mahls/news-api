@@ -5,20 +5,18 @@ import Box from '@mui/material/Box'
 import {Article} from './Article.tsx'
 import { AxiosResponse } from 'axios';
 
-
 interface FeedProps {
     author: string;
     title: string;
     url: string;
 }
 
-
 export const Feed = () => {
 
   //api from News API
   //https://newsapi.org/v2/top-headlines?country=au&apiKey=bc7599987fca4c71bdd0e8e598f0772e
+  //const apiKey = 'bc7599987fca4c71bdd0e8e598f0772e'
 
-  const apiKey = 'bc7599987fca4c71bdd0e8e598f0772e'
   let url = 'https://newsapi.org/v2/top-headlines?country=au&apiKey=bc7599987fca4c71bdd0e8e598f0772e'
 
   const fetcher = (url: string): Promise<any> => {
