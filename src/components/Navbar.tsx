@@ -7,13 +7,13 @@ export const Navbar = () => {
 
   const [open, set_open] = useState(true)
   
-  let titleStyle = 'border border-stone-950 text-xl mr-4 font-bold'
+  let titleStyle = ' cursor-pointer border-stone-950 text-xl mr-2 font-bold'
 
-  let style = 'border border-stone-700 rounded px-5 py-1 mr-2  transition cursor-pointer '
-  let link_side_menu = 'border-b border-stone-800 px-5 text-xl py-2 text-stone-200 hover:bg-stone-800'
+  let style = ' hover:border-b hover:border-stone-700 px-2 py-1  transition cursor-pointer '
+  let link_side_menu = 'border-b border-stone-700 px-5 text-xl py-2 text-stone-200 hover:bg-stone-800'
 
   let sideMenuStyle = `w-[80vw] h-full bg-stone-950 fixed top-0 left-0 z-50 ${open ? '-translate-x-full' : 'translate-x-none'} transition`
-  let backdropStyle = `transition ${!open ? 'fixed' : 'hidden' } opacity-25 w-full h-full top-0 left-0 bg-black cursor-pointer z-40`
+  let backdropStyle = `transition ${!open ? 'fixed' : 'hidden' } opacity-50 bg-stone-950 w-full h-full top-0 left-0 bg-black cursor-pointer z-40`
 
 
   return (

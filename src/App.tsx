@@ -1,5 +1,5 @@
 import {Navbar} from './components/Navbar.tsx'
-import {Feed} from './components/Feed.tsx'
+import {NewsFeed} from './components/NewsFeed.tsx'
 import {Footer} from './components/Footer.tsx'
 import {Weather} from './pages/Weather.tsx'
 import {Bitcoin} from './pages/Bitcoin.tsx'
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Feed />} />
+          <Route path="/" element={<NewsFeed />} />
           <Route path="/weather" element={<Weather />} />
           <Route path="/bitcoin" element={<Bitcoin/>} />
         </Routes>

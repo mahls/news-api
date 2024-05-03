@@ -11,7 +11,7 @@ interface FeedProps {
     url: string;
 }
 
-export const Feed = () => {
+export const NewsFeed = () => {
 
   //api from News API
   //https://newsapi.org/v2/top-headlines?country=au&apiKey=bc7599987fca4c71bdd0e8e598f0772e
