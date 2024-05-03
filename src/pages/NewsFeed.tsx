@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import axios from 'axios'
 import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
-import {Article} from './Article.tsx'
+import {Article} from '../components/Article.tsx'
 import { AxiosResponse } from 'axios';
 
 interface FeedProps {
@@ -28,7 +28,7 @@ export const NewsFeed = () => {
   if (error) return <div className='h-screen bg-stone-950'><h1>Failed to load</h1></div>;
   
   if (isLoading) return(
-    <div className='px-5 flex justify-center mb-2 h-screen bg-stone-900 align-center items-center'>
+    <div className='px-5 flex justify-center mb-2 h-screen bg-stone-950 align-center items-center'>
       <Box sx={{ display: 'flex' }}>
         <CircularProgress />
       </Box>
